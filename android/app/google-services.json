@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "363310110181",
+    "project_id": "moodapp-a370e",
+    "storage_bucket": "moodapp-a370e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363310110181:android:b211a959c0b7d582a8cb0c",
+        "android_client_info": {
+          "package_name": "com.example.flutter_mood"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjRXbNtlmowAA20TYnkXE2iJkqP0fLUpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
