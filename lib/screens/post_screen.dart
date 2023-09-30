@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mood/authentication/repos/authentication_repo.dart';
+import 'package:flutter_mood/postMood/repos/mood_repo.dart';
 import 'package:flutter_mood/postMood/view_models/mood_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -180,10 +181,11 @@ class _HomeScreenState extends ConsumerState<PostScreen> {
                   child: TextButton(
                     onPressed: () {
                       ref.watch(moodProvider.notifier).createMood(
-                          ref.read(authRepo).user!.uid,
-                          mood,
-                          content,
-                          formatDate);
+                            ref.read(moodRepo).moodID,
+                            mood,
+                            content,
+                            formatDate,
+                          );
                     },
                     child: const Text(
                       'Post',

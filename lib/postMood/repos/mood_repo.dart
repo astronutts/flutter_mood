@@ -13,6 +13,8 @@ class MoodRepository {
     await _db.collection('users').add(mood.toJson());
   }
 
+  String get moodID => _db.collection('users').doc().id;
+
   Future<List> getMood() async {
     final data = await _db.collection('users').get();
     List allData = data.docs.map((e) => e.data()).toList();
@@ -23,13 +25,8 @@ class MoodRepository {
     return myData;
   }
 
-  Future<void> removeMood(int index) async {
-    final data = await _db.collection('users').get();
-    List allData = data.docs.map((e) => e.data()).toList();
-    List myData = allData
-        .where((x) => x['email'] == _firebaseAuth.currentUser!.email)
-        .toList()
-        .removeAt(index);
+  Future<void> removeMood() async {
+    await _db.collection('users').doc('E0zbLJ2xj5rJamtDT5rz').delete();
   }
 }
 
