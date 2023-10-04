@@ -69,8 +69,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                   actions: [
                                     CupertinoDialogAction(
                                         onPressed: () {
-                                          print(snapshot.data![index]['uid']);
-
+                                          ref.watch(moodRepo).removeMood();
                                           Navigator.of(context).pop();
                                         },
                                         child: const Text(
